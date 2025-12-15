@@ -1,0 +1,143 @@
+/* Estilos Generales y Reset */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9;
+    color: #333;
+}
+
+/* Estilos del Encabezado */
+.header {
+    background-color: #004a7c; /* Azul oscuro */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header h2 {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #a0d2f0;
+}
+
+/* Contenedor Principal (Grid para los 13 proyectos) */
+.container-proyectos {
+    display: grid;
+    /* Define 3 columnas de igual ancho, con un mínimo de 300px */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; /* Espacio entre las cajas */
+    padding: 30px;
+    max-width: 1400px;
+    margin: 30px auto; /* Centrar el contenedor en la página */
+}
+
+/* Estilos de la Caja de Proyecto */
+.proyecto-caja {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que la imagen no se salga */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.proyecto-caja:hover {
+    transform: translateY(-5px); /* Pequeño efecto de elevación */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.proyecto-titulo {
+    background-color: #007bb6; /* Azul medio */
+    color: white;
+    margin: 0;
+    padding: 15px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.proyecto-contenido {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permite que el contenido ocupe el espacio restante */
+}
+
+/* Estilos de la Imagen */
+.imagen-contenedor {
+    margin-bottom: 15px;
+    /* Mantiene la proporción para que el texto y los enlaces estén alineados */
+    height: 180px; 
+    overflow: hidden;
+}
+
+.proyecto-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border-radius: 4px;
+    display: block;
+}
+
+/* Estilos de los Enlaces */
+.enlaces-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre los enlaces */
+    margin-top: auto; /* Empuja los enlaces a la parte inferior de la caja */
+}
+
+.enlace-pdf, .enlace-youtube {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    font-size: 0.9em;
+}
+
+.enlace-pdf {
+    background-color: #e53935; /* Rojo para PDF */
+    color: white;
+}
+
+.enlace-pdf:hover {
+    background-color: #c62828;
+}
+
+.enlace-youtube {
+    background-color: #ff0000; /* Rojo de YouTube */
+    color: white;
+}
+
+.enlace-youtube:hover {
+    background-color: #cc0000;
+}
+
+.enlace-pdf img, .enlace-youtube img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    filter: invert(1); /* Hace que los iconos sean blancos */
+}
+
+/* Estilos del Pie de Página */
+.footer {
+    background-color: #333;
+    color: #f4f7f9;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 0.9em;
+}

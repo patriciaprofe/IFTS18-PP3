@@ -14,6 +14,7 @@ body {
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
 }
 
 .header h1 {
@@ -140,4 +141,19 @@ body {
     padding: 15px 0;
     margin-top: 30px;
     font-size: 0.9em;
+}
+
+.img{
+    width: 20%;
+    height: auto;
+}
+.titulos{
+    text-align: center;
+}
+@media(max-width: 550px){
+    
+    .header{
+        flex-direction: column;
+        align-items: center;
+    }
 }
